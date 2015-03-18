@@ -7,7 +7,7 @@
 {{/parameters}}
  * 
  */
- {{&className}}.prototype.{{&methodName}} = function(parameters){
+ {{&className}}.prototype.{{&methodName}} = function(parameters, timeout, retries){
     if(parameters === undefined) {
         parameters = {};
     }
