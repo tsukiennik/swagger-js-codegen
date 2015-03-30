@@ -1,3 +1,7 @@
+if (timeout !== undefined) {
+    timeout = parseInt(timeout);
+}
+
 var req = {
     method: '{{method}}',
     uri: domain + path,
