@@ -22,6 +22,7 @@ function makeRequest() {
         for(var key in req) {
             reqOut[key] = req[key];
         }
+        reqOut.parameters = parameters;
     }
     request(req, function(error, response, body){
         if(error) {
