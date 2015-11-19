@@ -24,6 +24,9 @@ function makeRequest() {
         }
         reqOut.parameters = parameters;
     }
+    if (upload) {
+        return upload();
+    }
     request(req, function(error, response, body){
         if(error) {
             if ((error.code === "ETIMEDOUT") && (retries > 0)) {
