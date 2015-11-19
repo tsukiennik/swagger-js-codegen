@@ -11,6 +11,8 @@ var {{&className}} = (function(){
 
     var request = require('request');
     var Q = require('q');
+    var fs = require('fs');
+    var pathLib = require('path');
 
     function {{&className}}(options){
         var domain = (typeof options === 'object') ? options.domain : options;
