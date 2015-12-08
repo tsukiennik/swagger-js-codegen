@@ -20,7 +20,7 @@
     var queryParameters = {};
     var headers = {};
     var form = {};
-    var upload;
+    var upload = null;
 
     {{#isSecure}}
         if (this.token.isQuery) {
@@ -81,7 +81,7 @@
             {{/isSingleton}}
             {{^isSingleton}}
                 if(parameters['{{&name}}'] !== undefined){
-                    if('{{&paramType}}' !== 'file'){
+                    if('{{&name}}' !== 'file'){
                         form['{{&name}}'] = parameters['{{&name}}'];
                     }
                     else {
