@@ -13,9 +13,9 @@ var {{&className}} = (function(){
     var Q = require('q');
     var fs = require('fs');
     var pathLib = require('path');
-    var domainX = undefined
+    this.domain = null;
     function {{&className}}(options){
-        domainX = (typeof options === 'object') ? options.domain : options;
+        var domainX = (typeof options === 'object') ? options.domain : options;
         this.domain = domainX ? domainX : '{{&domain}}';
         if(this.domain.length === 0) {
             throw new Error('Domain parameter must be specified as a string.');
