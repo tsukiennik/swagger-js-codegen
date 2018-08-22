@@ -13,10 +13,10 @@ var {{&className}} = (function(){
     var Q = require('q');
     var fs = require('fs');
     var pathLib = require('path');
-
+    var domainX = undefined
     function {{&className}}(options){
-        var domain = (typeof options === 'object') ? options.domain : options;
-        this.domain = domain ? domain : '{{&domain}}';
+        domainX = (typeof options === 'object') ? options.domain : options;
+        this.domain = domainX ? domainX : '{{&domain}}';
         if(this.domain.length === 0) {
             throw new Error('Domain parameter must be specified as a string.');
         }
