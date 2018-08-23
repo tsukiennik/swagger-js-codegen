@@ -7,17 +7,18 @@
  * @param {object} [domainOrOptions.token] - auth token - object with value property and optional headerOrQueryName and isQuery properties
  */
 var {{&className}} = (function(){
-    //'use strict';
+    'use strict';
 
     var request = require('request');
     var Q = require('q');
     var fs = require('fs');
     var pathLib = require('path');
+    var domain = null;
     
     function {{&className}}(options){
         var domain = (typeof options === 'object') ? options.domain : options;
-        this.domain = domain ? domain : '{{&domain}}';
-        if(this.domain.length === 0) {
+        domain = domain ? domain : '{{&domain}}';
+        if(domain.length === 0) {
             throw new Error('Domain parameter must be specified as a string.');
         }
         {{#isSecure}}
