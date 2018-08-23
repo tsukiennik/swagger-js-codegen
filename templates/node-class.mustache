@@ -16,7 +16,7 @@ var {{&className}} = (function(){
     var domain = null;
     
     function {{&className}}(options){
-        var domain = (typeof options === 'object') ? options.domain : options;
+        domain = (typeof options === 'object') ? options.domain : options;
         domain = domain ? domain : '{{&domain}}';
         if(domain.length === 0) {
             throw new Error('Domain parameter must be specified as a string.');
